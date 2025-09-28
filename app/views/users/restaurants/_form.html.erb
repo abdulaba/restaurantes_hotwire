@@ -1,0 +1,8 @@
+<div class="container shadow mt-5 bg-white p-4">
+  <%= simple_form_for [:users, @restaurant] do |f| %>
+    <%= f.input :name  %>
+    <%= f.input :address  %>
+    <%= f.input :phone  %>
+    <%= f.submit @restaurant.new_record? ? "Guardar" : "Actualizar", class: "btn btn-primary" %> <%= link_to "Volver", users_restaurants_path, class: "btn btn-secondary" %>
+  <% end %>
+</div>

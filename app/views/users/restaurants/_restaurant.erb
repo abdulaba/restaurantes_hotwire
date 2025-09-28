@@ -1,0 +1,14 @@
+    <tr>
+      <td> <%= restaurant.name %> </td>
+      <td> <%= restaurant.address %> </td>
+      <td> <%= restaurant.phone %></td>
+      <td>
+        <%= link_to edit_users_restaurant_path(restaurant) do %>
+          <i class="fa-solid fa-pen-to-square text-warning"></i>
+        <% end %>
+        |
+        <%= link_to users_restaurant_path(restaurant) do %>
+          <i class="fa-solid fa-trash text-danger"></i>
+        <% end %>
+      </td>
+    </tr>

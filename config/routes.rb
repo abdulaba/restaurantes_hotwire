@@ -9,4 +9,8 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "posts#index"
+
+  namespace :users do
+    resources :restaurants
+  end
 end

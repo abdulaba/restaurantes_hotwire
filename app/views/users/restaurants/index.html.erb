@@ -1,0 +1,31 @@
+<div class="mt-4 d-flex justifiy-content-between ">
+  <h3>Restaurants</h3>
+  <div>
+    <%= link_to "Nuevo", new_users_restaurant_path, class: "btn btn-success mx-4", data: {turbo_frame: "form_restaurant" } %>
+  </div>
+
+  <%= turbo_frame_tag "form_restaurant" %>
+
+
+</div>
+<hr>
+<div class="container">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>Dirección</th>
+        <th>Telefóno</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody id="restaurants">
+          <%= render @restaurants %>
+    </tbody>
+  </table>
+</div>
+
+
+
+
+
