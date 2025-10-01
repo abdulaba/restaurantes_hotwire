@@ -13,4 +13,6 @@ Rails.application.routes.draw do
   namespace :users do
     resources :restaurants
   end
+
+  resources :restaurants, only: %i[index show]
 end

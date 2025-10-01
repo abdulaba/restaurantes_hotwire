@@ -6,8 +6,8 @@ User.destroy_all
 
 # Crear usuarios
 usuario1 = User.create!(
-  email: "andres@gmail.com",
-  password: "Ai218294"
+  email: "usuario1@email.com",
+  password: "password123"
 )
 
 usuario2 = User.create!(
@@ -22,23 +22,23 @@ usuario3 = User.create!(
 
 # Restaurantes para usuario 1 (3)
 usuario1.restaurants.create!([
-  { name: "Restaurante La Parrilla", address: "Calle 1 #123", phone: "111111111" },
-  { name: "Restaurante El Mar", address: "Calle 2 #456", phone: "222222222" },
-  { name: "Restaurante Los Postres", address: "Calle 3 #789", phone: "333333333" }
+  { name: "Restaurante La Parrilla", address: "Calle 1 #123", phone: "111111111", description: "Especializado en carnes a la brasa con un ambiente rústico." },
+  { name: "Restaurante El Mar", address: "Calle 2 #456", phone: "222222222", description: "Ofrece los mejores mariscos frescos de la región." },
+  { name: "Restaurante Los Postres", address: "Calle 3 #789", phone: "333333333", description: "Famoso por su repostería artesanal y ambiente acogedor." }
 ])
 
 # Restaurantes para usuario 2 (2)
 usuario2.restaurants.create!([
-  { name: "Restaurante Italiano", address: "Avenida 10 #111", phone: "444444444" },
-  { name: "Restaurante Mexicano", address: "Avenida 20 #222", phone: "555555555" }
+  { name: "Restaurante Italiano", address: "Avenida 10 #111", phone: "444444444", description: "Auténtica comida italiana con pasta fresca hecha en casa." },
+  { name: "Restaurante Mexicano", address: "Avenida 20 #222", phone: "555555555", description: "Sabores tradicionales mexicanos con un toque moderno." }
 ])
 
 # Restaurantes para usuario 3 (4)
 usuario3.restaurants.create!([
-  { name: "Restaurante Japonés", address: "Calle Japón #333", phone: "666666666" },
-  { name: "Restaurante Vegano", address: "Calle Verde #444", phone: "777777777" },
-  { name: "Restaurante Gourmet", address: "Calle Oro #555", phone: "888888888" },
-  { name: "Restaurante Familiar", address: "Calle Hogar #666", phone: "999999999" }
+  { name: "Restaurante Japonés", address: "Calle Japón #333", phone: "666666666", description: "Sushi y ramen preparados con ingredientes de primera calidad." },
+  { name: "Restaurante Vegano", address: "Calle Verde #444", phone: "777777777", description: "Comida saludable y 100% vegana en un ambiente relajado." },
+  { name: "Restaurante Gourmet", address: "Calle Oro #555", phone: "888888888", description: "Alta cocina con menús de autor y experiencia exclusiva." },
+  { name: "Restaurante Familiar", address: "Calle Hogar #666", phone: "999999999", description: "Un lugar ideal para compartir en familia con platos caseros." }
 ])
 
 puts "✅ Seeds creados: #{User.count} usuarios y #{Restaurant.count} restaurantes."
