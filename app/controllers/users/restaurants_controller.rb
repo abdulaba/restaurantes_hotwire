@@ -14,11 +14,7 @@ class Users::RestaurantsController < ApplicationController
     @restaurant = Restaurant.new(restaurant_params)
     @restaurant.user = current_user
     if @restaurant.save
-      respond_to do |format|
-        format.html { redirect_to users_restaurants_path }
-        format.turbo_stream
-      end
-
+      redirect_to users_restaurants_path
     else
       render :new, status: :unprocessable_entity
     end
